@@ -9,7 +9,8 @@ env:
   - COMMIT=${TRAVIS_COMMIT::8}
 
 before_install:
-  - sudo git clone https://github.com/spielhuus/qtcreator.git /repo
+  - sudo git clone https://github.com/spielhuus/docker-freedb-server.git /repo
+
 script:
   - cd /repo
   - sudo /bin/bash build.sh $DOCKER_USER $DOCKER_PASS $TRAVIS_BRANCH
