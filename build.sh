@@ -19,7 +19,6 @@ docker exec freedb-server_build /bin/bash -c "\
 export ENV instsubmitcgi=\"false\" && \
 mkdir -p /usr/local/bin && mkdir -p /usr/local/man/man1 && \
 mkdir -p /usr/local/cddbd/cgi && cd /usr/local/cddbd && \
-cd /repo && \
 chmod a+x ./config.sh && \
 echo | ./config.sh && \
 make && \
