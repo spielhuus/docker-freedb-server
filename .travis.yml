@@ -8,7 +8,10 @@ env:
     - secure: "a20EL2YDLI7CcKyPglIZQzHE29AEvSeyyHApKIWScInXh+0gDzcWgSvYbv76uJeqYSlqQPkfeQW3ky7jIPL6ZfcKU4kYnrhHdoe8JxqqIkGJ1SzDSVdJQqFUIynfODOezXV0kyxstBs6smaw8ycmXMmzBw4L9VyJV775tTgQgZdWwmcaFyhsKJjHJVpVuuc+uOuH10iJuw1MywoqC13OUnV5qzPEa5wIkwHWuu9pZJIP/s1R2rjOjQUAw0D8Vrf4adpeZ22DoeGyi1wgt701NmtUexe29RDbemwTsOzeMY8exCQhCUPLEq7wsi82HECdEryVmZ1Z+bcVEkjv3SWkSWhiDUV2ewQw60mLzj2X6PEdng+o3mnJcKgy+rYlRnKXgCVfbldGwLXbBe9t3FdklXoASbZotIN8z2zjWTRPlaQhpozvI408bweC/d9q/k8oKrDxmFsgw+5yMcemlIILmOrI+qg/qXPF/FcxMdDCMmIgmSNGmxMuDeTMmdlWnnbUR95pT0MSfteVPL11CgzpVs0JIigzO1MyEoXhbBrE543foF7/hUnT2VPCo40gTMxoLkN8n5lG8E07sT8unQ4Xo9+qyOjC7ZxesX7GdQ10hZLse6b8Ml2RzsblBV3Xp3qn48pjGjC62ksho5p6ETVp+sbNCxcnBh5IkN4CHlU4YZQ=" # DOCKER_PASS
   - COMMIT=${TRAVIS_COMMIT::8}
 
+before_install:
+  - sudo git clone https://github.com/spielhuus/qtcreator.git /repo
 script:
+  - cd /repo
   - sudo /bin/bash build.sh $DOCKER_USER $DOCKER_PASS $TRAVIS_BRANCH
 
 
