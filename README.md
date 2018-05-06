@@ -14,13 +14,15 @@ docker run --name cddbd -p 8888:8888 -itd \
            spielhuus/freedb-server
 ```
 
+The first startup will take some while because the database file are downloaded and indexed for fuzzy search.
+
 ### Configure the client
 
 configure the freedb client of your choice:
 
-'''
+```
 http://<host>:8888/cddb.cgi?{cddb command}
-'''
+```
 
 
 ### Credits:

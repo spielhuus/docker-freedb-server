@@ -39,6 +39,4 @@ export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $
 docker build -f Dockerfile -t $REPO:$TAG . --build-arg CDDB_VERSION=$CDDB_VERSION
 sudo docker push $REPO
 
-sudo rm -rf cddbd-1.5.2 cddbd-1.5.2.tar.gz database target
-sudo docker rm -f freedb-server_build
 
