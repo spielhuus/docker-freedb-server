@@ -9,9 +9,9 @@ env:
   - COMMIT=${TRAVIS_COMMIT::8}
 
 before_install:
-  - sudo git clone https://github.com/spielhuus/docker-freedb-server.git /repo
+  - sudo git clone https://github.com/spielhuus/docker-freedb-server.git
 
 script:
-  - sudo cd /repo && sudo /bin/bash build.sh $DOCKER_USER $DOCKER_PASS $TRAVIS_BRANCH
+  - sudo cd /docker-freedb-server && sudo /bin/bash build.sh $DOCKER_USER $DOCKER_PASS $TRAVIS_BRANCH
 
 
