@@ -4,15 +4,17 @@ services:
   - docker
 env:
   global:
-    - secure: "qyxW+KxLIaBXMvw841yO7bR2cAOSdYwfIe9Cr39fJ60UYl9B7YdAckXng6U8Xo69Pdt6wbuTRNEOOO7LqENo2YaGMA29y8tBW5pLau5Xm8TIGQs3bUtstbxggj8tbv35SZrMMlf4foIk6899UFLMMxaLmtl9ZDRF9tGZTe5Dt9BtrXYAM9Sfcycmtb4d+KugHkaRAP/5OIu7WdBReYsGv2y/Yw774gFbWrwztHh+dEfNGvy7wSVdy1LjigozrHXM6LpGmWW0WWfgvb6SZ9HiPhNSKFhaCFYkx3vYxN1mlKMZg7TwzzjEHRWIZAbfF6tMLnXDSXEfCXm/D8ZkHh7oTpEtr3Pfr4uUGRYdBiDCQv4X6StgS2gPtKEb2eHuj3fXjkZFjWbXvCsRN4P6GyPqZGHtJWlp7VKsNWugliQs9q7OjafDez8ReDxeA0Y5bI3yHNea5BqqUuwW2MOdv2zX7uVtU5UKcukhx8ejur7CWhHvE0osn1y7ur8xkTHqNhUzh1bxpaF4JfERssnMWet8FGxRuyewSvmmxooB6P9NgMWfUbbwixtw2P2IHT6O++PWJ4IfeUL/Xp3mznJFBt/CPnQ5RpRfJeehKNRwmRfDfNw9Vemek9Q5IQtXbpYEK3s3jjrlTxGOqsVHCKAwp53XAHf9VAwDoiMW41A2RX5vveI=" # DOCKER_USER
-    - secure: "a20EL2YDLI7CcKyPglIZQzHE29AEvSeyyHApKIWScInXh+0gDzcWgSvYbv76uJeqYSlqQPkfeQW3ky7jIPL6ZfcKU4kYnrhHdoe8JxqqIkGJ1SzDSVdJQqFUIynfODOezXV0kyxstBs6smaw8ycmXMmzBw4L9VyJV775tTgQgZdWwmcaFyhsKJjHJVpVuuc+uOuH10iJuw1MywoqC13OUnV5qzPEa5wIkwHWuu9pZJIP/s1R2rjOjQUAw0D8Vrf4adpeZ22DoeGyi1wgt701NmtUexe29RDbemwTsOzeMY8exCQhCUPLEq7wsi82HECdEryVmZ1Z+bcVEkjv3SWkSWhiDUV2ewQw60mLzj2X6PEdng+o3mnJcKgy+rYlRnKXgCVfbldGwLXbBe9t3FdklXoASbZotIN8z2zjWTRPlaQhpozvI408bweC/d9q/k8oKrDxmFsgw+5yMcemlIILmOrI+qg/qXPF/FcxMdDCMmIgmSNGmxMuDeTMmdlWnnbUR95pT0MSfteVPL11CgzpVs0JIigzO1MyEoXhbBrE543foF7/hUnT2VPCo40gTMxoLkN8n5lG8E07sT8unQ4Xo9+qyOjC7ZxesX7GdQ10hZLse6b8Ml2RzsblBV3Xp3qn48pjGjC62ksho5p6ETVp+sbNCxcnBh5IkN4CHlU4YZQ=" # DOCKER_PASS
-  - COMMIT=${TRAVIS_COMMIT::8}
-
+    - secure: "AzEZqKDm8gAZiqCF5fgVYwUihW0wRIw3gv2neWJj5pxZ7jKib7HuspxBlEJqJ92cc7g4AzjR43ZFqHXJQnNBbJn0Gh+fzPnfbwuqttK4kex80oB/JtOTxSTO3wUoncDqjAKET4j+tWxoa8PAQcviZ6iigpYyYiXb5VGfw/OisKHNiPr1+KhHQJQjqHGHqblo8TMFsiz6rqVqAfungpveKUrKClK+Dywf168TDTb6udjs283PtT189opfCsX6EAlEW8MFbpc53jPAvcck5GB/anbYHW4l2/n5ytvpYoy18mIywtq/OUisoBpbd6HEZ8I4d5m1WRN5flOsc+6hkHGWVCOvbTXsP41f0ulv6m2KNF6Jh8ahfUi8bEdL058k19SuDK2xfxeuFCTdAziRqn1NLqNHMViiJ5hphmGswQLNlKTzVfzOAnI1TqwUJGBdvixLCfP/+On/6Vy7L7qSOo4kaBzXnhz+VHDccs2K1saohZ1wliH5zfLgmDfYAsMRP9nMnT4CRtgG4cWw+wbVsTjEtBZ710WYomv65SkAYsg0ugxGXaOz8xDgTcJrWfRs3VnYLmAQ75YxgFt42n2zrPLN1YNfxpGvUJ28Y92ko/7gzwxwCu+yfs+6EeIF72S1cDWSBZ+gj2Cc84bSsPcZK4YEC5FQxUJhWYgnaKCYswsQTlo=" # DOCKER_USER
+    - secure: "NdfEwL3sUBMENZuizDk6A9KCfoEeLz2U8OYUk9JYfdX7aOMOwWJ9CWsUXN82SLVUeW6bAgAlMj0RnqlKR8O3izhdXfXkBNLPQkmQkZalNYQCPZaFzZx5/OXS6Eecz4bNxONV5SvQsYwXXceL4oIyV6NlICNtddYhMQ4TzIpHiG8ihdAfbpsB3lokzP/jlVPnMGEXqKxCyDvc91Y5mToL7ZmwOnSCNht64D2nmzQ5BeiORgI25wM8t13CLk5TC6EmmpWtn40/Q/puRgxtBB0kLih9Rs8co45txnVXwM7anr91JSE7AdbsRLN3EdMDNLUndekmXmFcgbb8AT/doXsBO24CMQig2yO6okHNA5u2amhrpWSH2sLmJKfnKzO3NSBkiujsgI2UPCs9jXcDZ5rEhQkfqIdnZmhixamki+sk0QVoy26LpLt42AMA7JG1fsOSTlaMgHHqSJYuiTB4v6tYb4GDNczltKAP0lpQlORMLiuPKloqDtqC6yO3DQkh7DrOUfeFkr60Ati2aeSW0kAweLdI4orNOOthKXSd8FjzQabxoLS89U4Jvdd8VHRcI9ew2KPHInK2YMJzzfyziwjb3/ywyEN0td02+JuYdyfITtzSFYn0EnKhgBP4wJE34ZgoVKcpx8otgPQ1SeVMExCRwNS7L1Nspc0hK7Tt1k2V+MU=" # DOCKER_PASS
+    - COMMIT=${TRAVIS_COMMIT::8}
 before_install:
   - sudo git clone https://github.com/spielhuus/docker-freedb-server.git /repo
-  - ls /
 
 script:
-  - cd /repo && sudo /bin/bash build.sh $DOCKER_USER $DOCKER_PASS $TRAVIS_BRANCH
-
-
+  - cd /repo
+  - sudo /bin/bash build.sh
+#  - sudo docker login -u $DOCKER_USER -p $DOCKER_PASS
+#  - export REPO=spielhuus/x2go
+#  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+#  - sudo docker build -f Dockerfile -t $REPO:$TAG .
+#  - sudo docker push $REPO
