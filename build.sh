@@ -35,6 +35,8 @@ tar cfz /target/cddbd-$CDDB_VERSION.tar.gz \
 sudo docker login -u $DOCKER_USER -p $DOCKER_PASS
 export REPO=spielhuus/freedb-server
 export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+pwd
+ls -l
 docker build -f Dockerfile -t $REPO:$TAG . --build-arg CDDB_VERSION=$CDDB_VERSION
 sudo docker push $REPO
 
