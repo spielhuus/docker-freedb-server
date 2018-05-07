@@ -12,7 +12,7 @@ before_install:
 
 script:
   - cd /repo
-  - sudo /bin/bash build.sh
+  - sudo /bin/bash build.sh $DOCKER_USER $DOCKER_PASS $TRAVIS_BRANCH
 #  - sudo docker login -u $DOCKER_USER -p $DOCKER_PASS
 #  - export REPO=spielhuus/x2go
 #  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
