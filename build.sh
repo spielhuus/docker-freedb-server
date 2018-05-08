@@ -24,7 +24,7 @@ echo | ./config.sh && \
 make && \
 chmod a+x ./install.sh && \
 /bin/echo -e \"/usr/local/bin\n/usr/local/man/man1\n\n\n\n/usr/local/cddbd/cgi\nn\n\n\n\n\n\n\n\n\n\n\n\n\n\nn\nn\" | ./install.sh && \
-tar cfz /target/cddbd-$CDDB_VERSION.tar.gz \
+tar cfz target/cddbd-$CDDB_VERSION.tar.gz \
         /usr/local/bin/cddbd \
         /usr/local/man/man1/cddbd.1 \
         /usr/local/cddbd/cgi/cddb.cgi \
@@ -37,6 +37,7 @@ export REPO=spielhuus/freedb-server
 export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
 pwd
 ls -l
+ls target -l
 docker build -f Dockerfile -t $REPO:$TAG . --build-arg CDDB_VERSION=$CDDB_VERSION
 sudo docker push $REPO
 
