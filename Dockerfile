@@ -15,8 +15,8 @@ RUN cp /usr/share/zoneinfo/Europe/Zurich /etc/localtime && \
 echo "Europe/Zurich" > /etc/timezone
 
 # install cddbd
-COPY target/cddbd-$CDDB_VERSION.tar.gz /target/
-RUN tar xfz /target/cddbd-$CDDB_VERSION.tar.gz -C /
+COPY target/cddbd-$CDDB_VERSION.tar.gz /
+RUN tar xfz /cddbd-$CDDB_VERSION.tar.gz -C /
 
 COPY cddbd.ini /usr/local/cddbd
 COPY start.sh /usr/local/cddbd
