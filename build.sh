@@ -4,8 +4,8 @@ DOCKER_USER=$1
 DOCKER_PASS=$2
 TRAVIS_BRANCH=$3
 
-mkdir $(pwd)/target
 CDDB_VERSION=1.5.2
+mkdir $(pwd)/target
 echo  http://ftp.freedb.org/pub/freedb/cddbd-$CDDB_VERSION.tar.gz
 curl -o cddbd-$CDDB_VERSION.tar.gz http://ftp.freedb.org/pub/freedb/cddbd-$CDDB_VERSION.tar.gz
 tar xfz cddbd-$CDDB_VERSION.tar.gz
@@ -16,13 +16,14 @@ docker exec freedb-server_build /bin/bash -c "apt-get update -y && apt-get upgra
 
 #build freedb-server 
 docker exec freedb-server_build /bin/bash -c "\
+cd /repo && \
 export ENV instsubmitcgi=\"false\" && \
 mkdir -p /usr/local/bin && mkdir -p /usr/local/man/man1 && \
-mkdir -p /usr/local/cddbd/cgi && cd /usr/local/cddbd && \
+mkdir -p /usr/local/cddbd/cgi && \
 chmod a+x ./config.sh && \
+chmod a+x ./install.sh && \
 echo | ./config.sh && \
 make && \
-chmod a+x ./install.sh && \
 /bin/echo -e \"/usr/local/bin\n/usr/local/man/man1\n\n\n\n/usr/local/cddbd/cgi\nn\n\n\n\n\n\n\n\n\n\n\n\n\n\nn\nn\" | ./install.sh && \
 tar cfz /target/cddbd-$CDDB_VERSION.tar.gz \
         /usr/local/bin/cddbd \
@@ -32,15 +33,9 @@ tar cfz /target/cddbd-$CDDB_VERSION.tar.gz \
         /usr/local/cddbd/sites \
         /usr/local/cddbd/passwd"
 
-echo "DIRECTORY"
-ls target
-
 sudo docker login -u $DOCKER_USER -p $DOCKER_PASS
 export REPO=spielhuus/freedb-server
 export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
-pwd
-ls -l
-ls target -l
 docker build -f Dockerfile -t $REPO:$TAG . --build-arg CDDB_VERSION=$CDDB_VERSION
 sudo docker push $REPO
 
