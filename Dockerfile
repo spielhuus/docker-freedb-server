@@ -9,7 +9,7 @@ RUN apt-get update -q && apt-get upgrade -q -y && \
 
 RUN sed -i 's/# de_CH.UTF-8 UTF-8/de_CH.UTF-8 UTF-8/' /etc/locale.gen && \
     sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
-    ln -s /etc/locale.alias /usr/share/locale/locale.alias && \
+    ln -sf /etc/locale.alias /usr/share/locale/locale.alias && \
     locale-gen && update-locale LANG=en_US.UTF-8
 RUN cp /usr/share/zoneinfo/Europe/Zurich /etc/localtime && \
 echo "Europe/Zurich" > /etc/timezone
