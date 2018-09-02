@@ -2,7 +2,7 @@
 
 
 [![Build Status](https://travis-ci.org/spielhuus/docker-freedb-server.svg?branch=master)](https://travis-ci.org/spielhuus/docker-freedb-server)
-[![GitHub version](https://badge.fury.io/gh/spielhuus%2Ffreedb-server.svg)](https://hub.docker.com/r/spielhuus/freedb-server)
+[![GitHub version](https://badge.fury.io/gh/spielhuus%2Fdocker-freedb-server.svg)](https://hub.docker.com/r/spielhuus/freedb-server)
 
 [Docker](https://docker.io/) recipe for [freedb-server](http://www.freedb.org/en/download__server_software.4.html) project
 
